@@ -10,6 +10,22 @@ This project implements a lane line detection system for vehicles using computer
 - **Hough Transform**: Detects lines in the masked image using the Hough transform algorithm.
 - **Visualization**: Overlays detected lane lines on the original video frames for clear visualization.
 
+## How It Works
+
+The lane detection system processes video frames using a series of image processing techniques:
+
+1. **Input Video**: The system reads video files from the `test_videos` directory.
+2. **Preprocessing**: Each frame is converted to grayscale and blurred to reduce noise.
+3. **Edge Detection**: Canny edge detection is applied to highlight lane boundaries.
+4. **Region of Interest**: The algorithm focuses on a specified area of the frame where lanes are expected.
+5. **Line Detection**: The Hough Transform detects lines in the processed image.
+6. **Overlay**: Detected lane lines are overlaid on the original frame for visualization.
+7. **Output Video**: The processed frames are compiled back into a video and saved in the output directory.
+
+### Test Images and Output Images
+
+The system uses test images located in the `test_images` directory to evaluate the performance of the lane detection algorithm. The output images generated during processing are saved in the `output_images` directory. These output images serve as a valuable tool for debugging, allowing to visually inspect the effectiveness of the lane detection process at each step and make necessary adjustments to improve accuracy.
+
 ## Requirements
 
 To run this project, you need the following:
